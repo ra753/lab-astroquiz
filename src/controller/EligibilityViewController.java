@@ -30,7 +30,8 @@ public class EligibilityViewController extends HttpServlet {
 
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+		
+		//get the data
 		String name=request.getParameter("name");
 		String number=request.getParameter("Number");
 		int age=Integer.parseInt(request.getParameter("age"));
@@ -38,7 +39,7 @@ public class EligibilityViewController extends HttpServlet {
 		int weight=Integer.parseInt(request.getParameter("weight"));
 		String country=request.getParameter("country");
 		
-	
+		//creates the user object with user constructor
 		User user = new User(name,number,age,height,weight,country);
 		user.setName(name);
 		user.setNumber(number);
